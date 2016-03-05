@@ -51,19 +51,16 @@
 
 
 
-<meta name="description" content="java基础语法学习001
-2015-11-16">
+<meta name="description" content="ArrayList是最流行的Java数据结构之一。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2015-11-16">
-<meta property="og:url" content="http://yoursite.com/2015/11/16/2015-11-16/index.html">
+<meta property="og:title" content="链表">
+<meta property="og:url" content="http://yoursite.com/2016/03/03/链表/index.html">
 <meta property="og:site_name" content="ld">
-<meta property="og:description" content="java基础语法学习001
-2015-11-16">
-<meta property="og:updated_time" content="2015-11-16T14:08:34.398Z">
+<meta property="og:description" content="ArrayList是最流行的Java数据结构之一。">
+<meta property="og:updated_time" content="2016-03-03T13:39:53.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2015-11-16">
-<meta name="twitter:description" content="java基础语法学习001
-2015-11-16">
+<meta name="twitter:title" content="链表">
+<meta name="twitter:description" content="ArrayList是最流行的Java数据结构之一。">
 
 
 
@@ -75,7 +72,7 @@
   };
 </script>
 
-  <title> 2015-11-16 | ld </title>
+  <title> 链表 | ld </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +212,7 @@
             
             
               
-                2015-11-16
+                链表
               
             
           </h1>
@@ -224,19 +221,34 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-16T22:07:56+08:00" content="2015-11-16">
-              2015-11-16
+            <time itemprop="dateCreated" datetime="2016-03-03T21:14:37+08:00" content="2016-03-03">
+              2016-03-03
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/软件/" itemprop="url" rel="index">
+                    <span itemprop="name">软件</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/16/2015-11-16/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/2015-11-16/" itemprop="commentsCount"></span>
+                <a href="/2016/03/03/链表/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/链表/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -255,29 +267,13 @@
       
 
       
-        <span itemprop="articleBody"><p>java基础语法学习001</p>
-<p>2015-11-16</p>
-<a id="more"></a>
-<h1 id="1-子类父类调用">1.子类父类调用</h1><ul>
-<li>当继承自父类的子类生成对象时，会首先调用父类的构造函数；</li>
-<li>在子类的构造函数中必须调用父类的构造函数；<code>super().xxx;</code></li>
-</ul>
-<h1 id="2-函数的复写（override）">2.函数的复写（override）</h1><ul>
-<li><strong>复写</strong>（override）也被称为覆盖或者重写；</li>
-</ul>
-<blockquote>
-<ol>
-<li>在具有父子关系的两个类当中;</li>
-<li>父类和子类各有一个函数，这两个函数的定义（返回值类、函数名和参数列表）完全相同；</li>
-</ol>
-</blockquote>
-<h1 id="3-使用super调用父类的成员函数">3.使用super调用父类的成员函数</h1><ul>
-<li>在复写父类的函数时，可以先用<code>super.introduce();</code>来调用父类的方法,以来避免重复写父类的已有方法；</li>
-</ul>
-<p>代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test2;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"我的名字是"</span>+name+<span class="string">",我的年龄是"</span>+age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	String address;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span></span>&#123;   <span class="comment">//复写方法</span></span><br><span class="line">		<span class="keyword">super</span>.introduce();</span><br><span class="line">		<span class="comment">//System.out.println("我的名字是"+name+",我的年龄是"+age);</span></span><br><span class="line">		System.out.println(<span class="string">"我的家在"</span>+address);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_myjava2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Student s= <span class="keyword">new</span> Student();</span><br><span class="line">		s.name = <span class="string">"张三"</span>;</span><br><span class="line">		s.age = <span class="number">20</span>;</span><br><span class="line">		s.address = <span class="string">"北京"</span>;</span><br><span class="line">		s.introduce();</span><br><span class="line">		</span><br><span class="line">		Person P = <span class="keyword">new</span> Person();</span><br><span class="line">		P.name = <span class="string">"A"</span>;</span><br><span class="line">		P.age = <span class="number">24</span>;</span><br><span class="line">		P.introduce();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">我的名字是张三,我的年龄是20</span><br><span class="line"></span><br><span class="line">我的家在北京</span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><p>ArrayList是最流行的Java数据结构之一。<br><a id="more"></a></p>
+<h1 id="基本语法">基本语法</h1><p>要创建ArrayList对象，可以使用不接受任何参数的构造函数：<br><code>ArrayList golfer = new ArrayList();</code></p>
+<p>该构造函数创建了一个不包含任何元素的默认链表。<br>链表的长度（size）指当前存储的元素数；<br>链表的容量（capacity）总是大于等于其长度；</p>
+<p>如何创建指定容量的链表：<br><code>ArrayList golfer = new ArrayList(30);</code><br>以上代码分配给链表30个元素的容量，如果到达指定的容量后，链表将自动加长，增加的值为初始容量的一半，因此之后会达到45。</p>
+<h1 id="函数">函数</h1><h2 id="加入链表">加入链表</h2><p><code>add(Object)</code>方法将元素加入到链表中，如下：<br><code>golfer.add(&quot;Tseng&quot;);</code><br><code>golfer.add(&quot;Lewis&quot;);</code><br><code>golfer.add(&quot;Stanford&quot;);</code>   </p>
+<h2 id="检索最后加入的字符串">检索最后加入的字符串</h2><p><code>lastElement()</code>方法返回一个Object，必须将返回值转换为加入到链表中的类型。如果说golfer中存储的是字符串，因此将返回的对象转换为字符串。<br><code>String s = (String) golfer.lastElement();</code></p>
+</span>
       
     </div>
 
@@ -294,17 +290,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/08/2015-11-8/" rel="next" title="第一篇博客">
-                <i class="fa fa-chevron-left"></i> 第一篇博客
+              <a href="/2015/12/13/包和访问权限/" rel="next" title="包和访问权限">
+                <i class="fa fa-chevron-left"></i> 包和访问权限
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/19/C-创建对象的三种方法/" rel="prev" title="C++创建对象的三种方法 ">
-                C++创建对象的三种方法  <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -331,8 +323,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/16/2015-11-16/"
-           data-title="2015-11-16" data-url="http://yoursite.com/2015/11/16/2015-11-16/">
+      <div class="ds-thread" data-thread-key="2016/03/03/链表/"
+           data-title="链表" data-url="http://yoursite.com/2016/03/03/链表/">
       </div>
     
   </div>
@@ -432,7 +424,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-子类父类调用"><span class="nav-number">1.</span> <span class="nav-text">1.子类父类调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-函数的复写（override）"><span class="nav-number">2.</span> <span class="nav-text">2.函数的复写（override）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-使用super调用父类的成员函数"><span class="nav-number">3.</span> <span class="nav-text">3.使用super调用父类的成员函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加入链表"><span class="nav-number">2.1.</span> <span class="nav-text">加入链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检索最后加入的字符串"><span class="nav-number">2.2.</span> <span class="nav-text">检索最后加入的字符串</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
