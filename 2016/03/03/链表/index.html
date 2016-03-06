@@ -51,16 +51,16 @@
 
 
 
-<meta name="description" content="ArrayList是最流行的Java数据结构之一。">
+<meta name="description" content="ArrayList是一个类，List是一个接口，ArrayList继承自List接口并实现了List的方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表">
 <meta property="og:url" content="http://yoursite.com/2016/03/03/链表/index.html">
 <meta property="og:site_name" content="ld">
-<meta property="og:description" content="ArrayList是最流行的Java数据结构之一。">
-<meta property="og:updated_time" content="2016-03-03T13:39:53.712Z">
+<meta property="og:description" content="ArrayList是一个类，List是一个接口，ArrayList继承自List接口并实现了List的方法。">
+<meta property="og:updated_time" content="2016-03-05T11:55:51.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表">
-<meta name="twitter:description" content="ArrayList是最流行的Java数据结构之一。">
+<meta name="twitter:description" content="ArrayList是一个类，List是一个接口，ArrayList继承自List接口并实现了List的方法。">
 
 
 
@@ -288,11 +288,16 @@
       
 
       
-        <span itemprop="articleBody"><p>ArrayList是最流行的Java数据结构之一。<br><a id="more"></a></p>
-<h1 id="基本语法">基本语法</h1><p>要创建ArrayList对象，可以使用不接受任何参数的构造函数：<br><code>ArrayList golfer = new ArrayList();</code></p>
+        <span itemprop="articleBody"><p>ArrayList是一个类，List是一个接口，ArrayList继承自List接口并实现了List的方法。<br><a id="more"></a></p>
+<h1 id="基本语法">基本语法</h1><p>List<e>（&lt;&gt;内的内容可省略），与数组类似：<br>实例化：<code>List&lt;数据类型&gt; list = new ArrayList&lt;数据类型&gt;();</code></e></p>
+<p>要创建ArrayList对象，可以使用不接受任何参数的构造函数：<br><code>ArrayList golfer = new ArrayList();</code></p>
 <p>该构造函数创建了一个不包含任何元素的默认链表。<br>链表的长度（size）指当前存储的元素数；<br>链表的容量（capacity）总是大于等于其长度；</p>
 <p>如何创建指定容量的链表：<br><code>ArrayList golfer = new ArrayList(30);</code><br>以上代码分配给链表30个元素的容量，如果到达指定的容量后，链表将自动加长，增加的值为初始容量的一半，因此之后会达到45。</p>
-<h1 id="函数">函数</h1><h2 id="加入链表">加入链表</h2><p><code>add(Object)</code>方法将元素加入到链表中，如下：<br><code>golfer.add(&quot;Tseng&quot;);</code><br><code>golfer.add(&quot;Lewis&quot;);</code><br><code>golfer.add(&quot;Stanford&quot;);</code>   </p>
+<h1 id="函数">函数</h1><h2 id="加入链表">加入链表</h2><p><code>add(Object)</code>方法将元素加入到链表中，如下：</p>
+<pre><code class="java">golfer.add(<span class="string">"Tseng"</span>);
+golfer.add(<span class="string">"Lewis"</span>);
+golfer.add(<span class="string">"Stanford"</span>);
+</code></pre>
 <h2 id="检索最后加入的字符串">检索最后加入的字符串</h2><p><code>lastElement()</code>方法返回一个Object，必须将返回值转换为加入到链表中的类型。如果说golfer中存储的是字符串，因此将返回的对象转换为字符串。<br><code>String s = (String) golfer.lastElement();</code></p>
 </span>
       
@@ -318,6 +323,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/06/三极管驱动继电器电路/" rel="prev" title="三极管驱动继电器电路">
+                三极管驱动继电器电路 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -389,21 +398,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
